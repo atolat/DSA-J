@@ -17,22 +17,21 @@ public class Stack<T> {
 		if(this.stack.length == size){
 			resize(2*this.stack.length);
 		} 
-		
+
 		this.stack[size] = data;
 	}
-	
+
 	public T pop() {
 		if(size == 0){
-			System.out.println("Empty!");
+			System.out.println("Nothing to pop!");
 			return null;
 		} else {
-			
-			//check to shrink size...memory optimization
+			T poppedData = this.stack[size];
+			size--;
 //			if(size == this.stack.length/4){
 //				resize(this.stack.length/2);
 //			}
-//			
-			return this.stack[size--];
+			return poppedData;
 		}
 	}
 
