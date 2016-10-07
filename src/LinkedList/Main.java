@@ -11,8 +11,12 @@ public class Main {
 		myList.addData(3);
 		myList.addData(4);
 		myList.addData(5);
+		myList.addData(3);
+		myList.addData(3);
+		myList.addData(3);
 		myList.removeData(3);
 		myList.traverseList();
+		System.out.println("\n"+myList.getSize());
 
 	}
 }

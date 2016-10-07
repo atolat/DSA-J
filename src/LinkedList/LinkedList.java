@@ -55,11 +55,12 @@ public class LinkedList<T extends Comparable<T>> implements List<T> {
 					//set next pointer of current to the next node of next node :P
 					previousNode.setNextNode(nodeToDelete.getNextNode());
 					//Set temp node to null
-					nodeToDelete = null;
+					currentNode =  currentNode.getNextNode();
 					sizeOfList--;
 				}
+				previousNode = currentNode;
 				currentNode = currentNode.getNextNode();
-				previousNode = previousNode.getNextNode();
+				//previousNode = previousNode.getNextNode();
 			}
 
 		}
