@@ -22,7 +22,7 @@ public class Stack<T> {
 	}
 
 	public T pop() {
-		if(size == 0){
+		if(this.size == 0){
 			System.out.println("Nothing to pop!");
 			return null;
 		} else {
