@@ -3,11 +3,61 @@ package BinarySearchTree;
 public class BST<T extends Comparable<T>> implements Tree<T> {
 
 	private Node<T> root;
+	//root = null;
 
 	@Override
 	public void traverse() {
-		// TODO Auto-generated method stub
+		if (this.root != null) {
+			System.out.println("Inorder::\n");
+			traverseInOrder(this.root);
+			
+			System.out.println("Preorder::\n");
+			traversePreOrder(this.root);
+			
+			System.out.println("Postorder::\n");
+			traversePostOrder(this.root);
+		}
 
+	}
+
+	private void traverseInOrder(Node<T> recurseNode) {
+		// Recurse along left subtree
+		if (recurseNode.getLeftChild() != null) {
+			traverseInOrder(recurseNode.getLeftChild());
+			// Print Root
+		}
+		System.out.print(recurseNode + "-->");
+		// Recurse along right subtree
+		if (recurseNode.getRightChild() != null) {
+			traverseInOrder(recurseNode.getRightChild());
+		}
+	}
+
+	private void traversePreOrder(Node<T> recurseNode) {
+		System.out.print(recurseNode + "-->");
+		// Recurse along left subtree
+		if (recurseNode.getLeftChild() != null) {
+			traverseInOrder(recurseNode.getLeftChild());
+		}
+
+		// Recurse along right subtree
+		if (recurseNode.getRightChild() != null) {
+			traverseInOrder(recurseNode.getRightChild());
+		}
+	}
+
+	private void traversePostOrder(Node<T> recurseNode) {
+
+		// Recurse along left subtree
+		if (recurseNode.getLeftChild() != null) {
+			traverseInOrder(recurseNode.getLeftChild());
+		}
+
+		// Recurse along right subtree
+		if (recurseNode.getRightChild() != null) {
+			traverseInOrder(recurseNode.getRightChild());
+		}
+		System.out.print(recurseNode + "-->");
 	}
 
 	@Override
