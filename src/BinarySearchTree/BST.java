@@ -11,10 +11,10 @@ public class BST<T extends Comparable<T>> implements Tree<T> {
 			System.out.println("Inorder::\n");
 			traverseInOrder(this.root);
 			
-			System.out.println("Preorder::\n");
+			System.out.println("\nPreorder::\n");
 			traversePreOrder(this.root);
 			
-			System.out.println("Postorder::\n");
+			System.out.println("\nPostorder::\n");
 			traversePostOrder(this.root);
 		}
 
