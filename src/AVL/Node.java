@@ -7,7 +7,7 @@ public class Node {
 
 	private Node leftNode;
 	private Node rightNode;
-
+	private int height;
 	// Node Constructor
 	public Node(int data) {
 		this.data = data;
@@ -40,6 +40,14 @@ public class Node {
 	@Override
 	public String toString() {
 		return "" + this.data;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
 	}
 
 }
