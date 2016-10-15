@@ -12,5 +12,7 @@ public interface Tree<T> {
 	public T getMinVal();
 
 	public void insert(T i);
+	
+	public T getRoot();
 
 }

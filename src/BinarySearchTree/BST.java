@@ -3,17 +3,17 @@ package BinarySearchTree;
 public class BST<T extends Comparable<T>> implements Tree<T> {
 
 	private Node<T> root;
-	//root = null;
+	// root = null;
 
 	@Override
 	public void traverse() {
 		if (this.root != null) {
 			System.out.println("Inorder::\n");
 			traverseInOrder(this.root);
-			
+
 			System.out.println("\nPreorder::\n");
 			traversePreOrder(this.root);
-			
+
 			System.out.println("\nPostorder::\n");
 			traversePostOrder(this.root);
 		}
@@ -129,4 +129,8 @@ public class BST<T extends Comparable<T>> implements Tree<T> {
 		return null;
 	}
 
+	@Override
+	public T getRoot() {
+		return this.root.getData();
+	}
 }
