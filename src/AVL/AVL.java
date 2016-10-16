@@ -32,22 +32,26 @@ public class AVL implements Tree {
 
 		// For Case I, Double left heavy -- One Right Rotation
 		if (balance > 1 && data < recurseNode.getLeftNode().getData()) {
+			System.out.println("Tree is double left heavy");
 			return rotateRight(recurseNode);
 		}
 
 		// For Case II, Double right heavy -- One Left Rotation
 		if (balance < -1 && data > recurseNode.getRightNode().getData()) {
+			System.out.println("Tree is double right heavy");
 			return rotateLeft(recurseNode);
 		}
 
 		// Case III, Left Right Heavy -- Two Rotations
 		if (balance > 1 && data > recurseNode.getLeftNode().getData()) {
+			System.out.println("Tree is left right heavy");
 			recurseNode.setLeftNode(rotateLeft(recurseNode.getLeftNode()));
 			return rotateRight(recurseNode);
 		}
 
 		// Case IV, Right Left Heavy -- Two Rotations
 		if (balance < -1 && data < recurseNode.getRightNode().getData()) {
+			System.out.println("Tree is right left heavy");
 			recurseNode.setRightNode(rotateRight(recurseNode.getRightNode()));
 			return rotateLeft(recurseNode);
 		}
