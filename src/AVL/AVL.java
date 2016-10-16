@@ -87,7 +87,7 @@ public class AVL implements Tree {
 	// Right Rotate
 	private Node rotateRight(Node node) {
 
-		System.out.println("Rotating Right");
+		System.out.println("Rotating Right at node:: "+node);
 
 		// Setting up temp nodes
 		Node tempLeftNode = node.getLeftNode();
@@ -109,7 +109,7 @@ public class AVL implements Tree {
 	// Left Rotate
 	private Node rotateLeft(Node node) {
 
-		System.out.println("Rotating Left");
+		System.out.println("Rotating Left at node:: "+node);
 
 		// Setting up temp nodes
 		Node tempRightNode = node.getRightNode();
